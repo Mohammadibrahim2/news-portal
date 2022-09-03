@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>update news</title>
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="news.css">
+</head>
+<body class="bg-light">
+<header class="container">
+	
+<nav class="my-4">
+	<div class="navigation">
+		
+		<div class="logo"><a href="#"><span class="bg-primary text-white py-2 px-2  rounded">news</span> portal</a></div>
+		<div class="nav-items">
+			<span id="newss" >news</span>
+			<span id="blog">blog</span>
+			<div class="small-img">
+		    <img src="images/bg2.jpg">
+			</div>
+			
+		</div>
+	</div>
+	
+
+</nav>
+
+<div class="under-line"></div>
+</header>
+
+<main class="container">
+	<section id="news">
+	<section class="news-category">
+		<ul class="news-list py-4 position-static" >
+			<li><a onclick="btn('01')"value="01" >Home</a></li>
+			<li><a onclick="btn('02')"value="02">Breaking News</a></li>
+			<li><a onclick="btn('03')"value="03">Rergular News</a></li>
+			<li><a onclick="btn('04')"value="04">International News</a></li>
+			<li><a onclick="btn('04')" href="#">Sports</a></li>
+			<li><a onclick="btn('06')" href="#">Entertainment</a></li>
+		    <li><a onclick="btn('07')" href="#">Culture</a></li>
+		    <li><a onclick="btn('07')" href="#">Arts</a></li>
+		    <li><a onclick="btn('08')" href="#">All News</a></li>
+		</ul>
+	</section>
+	<section class="news-category">
+		<div class="number-details">
+		<h4 id="numbers-of-news"></h4>
+		</div>
+	</section>
+	<section class="news-shorts">
+		<div class="Tranding-part">
+		<div class="shorts-view">
+			<h5>shorts details</h5><input class="w-50"type="text" id="sort">
+		</div>
+		<div class="trand-pick">
+			<a href="#">Today's Pick</a>
+			<a href="#">Tranding</a>
+		</div>
+	</div>
+	</section>
+<div id="spinner"class="spinner-div d-none ">
+<div class="spinner-border text-primary " role="status">
+  <span class="visually-hidden "></span>
+</div>
+</div>
+	<section class="news-card-section" id="news-card-section">
+
+	</section>
+
+</section>
+<section id="blogs" class="d-none">
+	<div>
+		<div class="function-difference">
+		<h2>1) what is difference between arrow function and regular function?</h2>
+		<div class="A-box"><p>1) If the arrow function contains one expression,we can omit the curly bracss and will be implicitly returned</p>
+			<p>1) In regular function ,you have to use return keyword to return any value.If we don't do that,the function will return undefined</p></div>
+			<div class="A-box"><p>2) Arrow function dont't have their own .this</p>
+			<p>2) Regular function have their own .this</p></div>
+			<div class="A-box"><p>3) we can't have duplicate parameters in arrow functions</p>
+			<p>3) we can duplicate parameters in regular function</p></div>
+			</div>
+
+	     <div class="Var-let-const">
+			<h2>2) What id the difference into var,let and const?</h2>
+			<div class="B-box">
+				<p>Var</p>
+				<p>Let</p>
+				<p>Const</p>
+			</div>
+		<div class="B-box">
+			<p>1) The scope of a var variable is functional scope.</p>
+			<p>1) The scope of a let variable is block scope.</p>
+		    <p>1) The scope of a const variable is block scope.</p></div>
+
+			<div class="B-box">
+			<p>2) It can be updated and re-declared into the scope.</p>
+			<p>2)It can be updated but cannot be re-declared into the scope</p>
+			<p>2)It cannot be updated or re-declared into the scope.</p>
+		</div>
+			<div class="B-box">
+			<p>3) It can be accessed without initialization as its default value is “undefined”.</p>
+			<p>3) It cannot be accessed without initialization otherwise it will give ‘referenceError’.</p>
+			<p>3)It cannot be accessed without initialization, as it cannot be declared without initialization.</p>
+		</div> 
+		<h2>3) Why we use templete string?</h2>
+			<div class="templete">
+
+				<p>
+Template literals are enclosed by backtick (`) characters instead of double or single quotes.
+
+Along with having normal strings, template literals can also contain other parts called placeholders, which are embedded expressions delimited by a dollar sign and curly braces: ${expression}. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don't supply your own) just performs string interpolation to do substitution of the placeholders and then concatenate the parts into a single string.
+			</p>
+			</div>
+
+
+		</div>	
+	</div>
+</section>
+</main>
+<footer class="container">
+	<div class="footer bg-white text-dark p-5">
+   <h5>@copy wright by  Mohammad Ibrahim,2022</h5>		
+	</div>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/696f5b5cca.js" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script type="text/javascript"src="news.js"></script>
+</body>
+</html>

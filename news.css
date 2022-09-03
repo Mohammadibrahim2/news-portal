@@ -1,0 +1,284 @@
+
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+nav{
+	widows: 100%;
+	height: 90px;
+	padding: 5px 10px;
+	margin: auto;
+
+}
+.navigation{
+	padding-top: 5px;
+	text-transform: uppercase;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+
+}
+.nav-items{
+	display: flex;
+}
+.nav-items span{
+	padding-right:7px;
+}
+.active{
+	color: blue;
+}
+.small-img img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.under-line{
+	margin-top: 4px;
+	width:100%;
+	height: 2px;
+	background-color: gray;
+}
+/*...................main section....................*/
+.news-category{
+	width: 100%;
+	height: 40px;
+}
+.news-list{
+	display: flex;
+	justify-content: space-around;
+	padding-left:0 ;
+	font-size: 20px;
+	
+}
+
+.news-list li a{
+	color: #000;
+}
+.news-list li a:hover{
+	color: blue;
+}
+.number-details{
+   margin-top: 40px;
+   width: 100%;
+   height: 60px;
+   padding: 15px 20px;
+   background-color: #fff;
+   color: #000;
+
+}
+.news-shorts{
+
+	margin-top: 50px;
+	padding: 0 20px;
+	width: 100%;
+	height: 60px;
+}
+.shorts-view{
+	display: flex;
+	justify-content: space-around;
+}
+.shorts-view input{
+	outline: none;
+	margin-left: 3px;
+
+}
+
+
+.Tranding-part{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.trand-pick a{
+	padding:10px 25px;
+	background-color: blue;
+	color: #fff;
+	border-radius: 4px;
+}
+.trand-pick a:nth-child(2){
+	margin-left: 5px;
+    background-color: #fff;
+	color: blue;
+	border:2px solid blue ;
+}
+/*...................news cards............................*/
+.news-card{
+	width: 100%;
+	height: auto;
+	padding: 20px 30px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+}
+.thumbnil{
+	width:350px;
+	height: 400px;
+	/*padding: 10px 0;*/
+	background-color: #fff;
+}
+.thumbnil img{
+	width: 100%;
+	height:100%;
+	border-radius: 5px;
+	object-fit:cover;
+	
+
+}
+.news-description{
+	width:80%;
+	margin-left: 10px;
+	padding:25px 15px;
+	cursor: pointer;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.news-represents-items{
+	display: flex;
+	justify-content: space-between;
+
+}
+.author{
+	display: flex;
+
+}
+.author img{
+	margin-right: 9px;
+
+}
+/*.......................spinner..................*/
+
+/*.......................modal...................*/
+.modal{
+	display: none;
+}
+.spinner-div{
+	width: 100%;
+	height: 40px;
+	margin: 20px 0;
+	position: relative;
+}
+.spinner-border{
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+
+
+.function-difference,.Var-let-const{
+	margin: 25px 0;
+	background-color: #fff;
+}
+.templete{
+	display: flex;
+	justify-content: center;
+}
+
+
+.A-box{
+	display: flex;
+	width: 100%;
+	height: auto;
+	padding: 10px ;
+	
+
+}
+ .A-box p:nth-child(1){
+	width: 50%;
+}
+.A-box p:nth-child(2){
+	width: 50%;
+}
+.B-box{
+	display: flex;
+}
+.B-box p:nth-child(1){
+	width: 33.33%;
+}
+.B-box p:nth-child(2){
+width: 33.33%;
+}
+.B-box p:nth-child(3){
+	width: 33.33%;
+}
+/*........................footer.....................*/
+.footer{
+	text-align: center;
+	width: 100%;
+	height: 60px;
+
+}
+
+/*.................for mobile veiw.....................*/
+@media only screen and (max-width: 600px){
+
+    .Tranding-part{
+    	margin-top: 20px;
+    	
+    	height: 80px;
+    	display: flex;
+    	flex-direction: column;
+    }
+    .number-details{
+    	margin-top: 250px;
+    }
+    .shorts-view{
+    	font-size: 10px;
+   
+
+    }
+       .news-list{
+
+       	height: 300px;
+       	display: flex;
+       	flex-direction: column;
+       	align-items: flex-start;
+       	background-color: orangered;
+
+    	
+    }
+    
+    .news-list li a{
+    	font-size: 20px;
+
+    }
+    .news-card-section{
+    	margin-top: 50px;
+    }
+	.news-card{
+		display: flex;
+		flex-direction: column;
+	}
+   .news-description{
+   	width: 100%;
+   }
+   .thumbnil{
+   	width: 100%;
+   	height: 100%;
+   }
+   .thumbnil img{
+   	object-fit: contain;
+   }
+   .news-description{
+   	margin-left: 0;
+   }
+  .news-represents-items{
+  	font-size: 15px;
+  }
+
+  .footer{
+	
+	font-size: 18px;
+	padding-bottom: 5px;
+	margin-top: 40px;
+
+}
+
+}
+
+
+
