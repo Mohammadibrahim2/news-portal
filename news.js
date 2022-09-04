@@ -84,7 +84,7 @@ const showNews=(news)=>{
 					</div>
 					</div>
 					<div class="views">
-						<i></i><h4>${info.rating.number} M</h4>
+					<i class="fa-regular fa-eye"></i><h4>${info.rating.number} M</h4>
 					
           </div>
 

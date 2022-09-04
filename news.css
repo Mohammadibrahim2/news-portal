@@ -98,7 +98,7 @@ nav{
 /*...................news cards............................*/
 .news-card{
 	width: 100%;
-	height: auto;
+	height: 350px;
 	padding: 20px 30px;
 	border-radius: 3px;
 	display: flex;
@@ -106,7 +106,7 @@ nav{
 }
 .thumbnil{
 	width:350px;
-	height: 400px;
+	height: 300px;
 	/*padding: 10px 0;*/
 	background-color: #fff;
 }
@@ -132,6 +132,15 @@ nav{
 	display: flex;
 	justify-content: space-between;
 
+}
+.views{
+	align-self: baseline;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.fa-reg{
+	margin-left: 4px;
 }
 .author{
 	display: flex;
@@ -200,6 +209,9 @@ width: 33.33%;
 
 /*.................for mobile veiw.....................*/
 @media only screen and (max-width: 600px){
+	.news-card{
+		height: auto;
+	}
 
     .Tranding-part{
     	margin-top: 20px;
