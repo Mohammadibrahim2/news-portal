@@ -6,8 +6,9 @@ const AllNews=(category_id)=>{
 	fetch(url).then((response) => {
   if (response.ok) {
     return response.json();
-  } else {
-    throw new Error('Something went wrong');
+  } 
+  else {
+    throw new Error('Something went ');
   }
 })
 .then((responseJson) => {
@@ -127,8 +128,8 @@ blog.addEventListener('click',function(){
 const news=document.getElementById('news')
 news.style.display="none"
 blogs.classList.remove('d-none')
-blog.classList.add('active')
-newsC.classList.remove('active')
+blog.classList.add('active');
+newsC.classList.remove('active');
 
 });
 
@@ -137,8 +138,8 @@ newsC.addEventListener('click',function(){
 const blogs=document.getElementById('blogs')
 blogs.classList.add('d-none')
 news.style.display="block"
-newsC.classList.add('active')
-blog.classList.remove('active')
+newsC.classList.add('active');
+blog.classList.remove('active');
 
 });
 
