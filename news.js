@@ -1,6 +1,4 @@
 
-
-
 const AllNews=(category_id)=>{
 
 	const url=`https://openapi.programming-hero.com/api/news/category/${category_id}`
@@ -24,9 +22,6 @@ const AllNews=(category_id)=>{
 
 const showNews=(news)=>{
 
-	
-   
-
    const newsCardSection=document.getElementById('news-card-section')
    newsCardSection.innerHTML=" "
    const numbersOfNews=document.getElementById('numbers-of-news');
@@ -45,12 +40,9 @@ const showNews=(news)=>{
    	spinner.classList.add('d-none')
    }
   
+   news.forEach(info=>{
 
-
-
-    news.forEach(info=>{
-
-    	const modalTittle=document.getElementById('modal-tittle')
+   const modalTittle=document.getElementById('modal-tittle')
  modalTittle.innerText=info.title;
  const newsDetails=document.getElementById('news-details')
  newsDetails.innerHTML=`
@@ -63,7 +55,7 @@ const showNews=(news)=>{
 
  `
 
-    	console.log(info)
+   	console.log(info)
     const sort=document.getElementById('sort')
 
     const infoObject=info.total_view;
@@ -82,10 +74,6 @@ const showNews=(news)=>{
 				<div>
 				<h5>${info.title}</h5>
 				<p class="mt-5">${info.details.slice(0,300)}....</p>
-
-
-				<p></p>
-			
 
 				<div class="news-represents-items">
 					<div class="author small-img">
@@ -113,9 +101,6 @@ const showNews=(news)=>{
                      </div>
                       </div>
                      </div>	
-
-
-
 	                   </div>
 
 	                   `
@@ -130,18 +115,11 @@ const showNews=(news)=>{
 
 const btn=(value)=>{
 
-
-
-
    AllNews(value);
 	
 }
 AllNews('08');
 btn();
-
-
-
-
 
 const blog=document.getElementById('blog')
 blog.addEventListener('click',function(){
