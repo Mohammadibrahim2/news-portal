@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>update news</title>
+	<title>News tribune</title>
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
 	<link rel="stylesheet" type="text/css" href="news.css">
 </head>
@@ -13,7 +13,7 @@
 <nav class="my-4">
 	<div class="navigation">
 		
-		<div class="logo"><a href="#"><span class="bg-primary text-white py-2 px-2  rounded">news</span> portal</a></div>
+		<div class="logo"><a href="#"><span class="bg-primary text-white py-2 px-2  rounded">News</span>Tribune</a></div>
 		<div class="nav-items">
 			<span id="newss" >news</span>
 			<span id="blog">blog</span>
@@ -33,17 +33,30 @@
 <main class="container">
 	<section id="news">
 	<section class="news-category">
-		<ul class="news-list py-4 position-static" >
-			<li><a onclick="btn('01')"value="01" >Home</a></li>
-			<li><a onclick="btn('02')"value="02">Breaking News</a></li>
-			<li><a onclick="btn('03')"value="03">Rergular News</a></li>
-			<li><a onclick="btn('04')"value="04">International News</a></li>
-			<li><a onclick="btn('04')" href="#">Sports</a></li>
-			<li><a onclick="btn('06')" href="#">Entertainment</a></li>
-		    <li><a onclick="btn('07')" href="#">Culture</a></li>
-		    <li><a onclick="btn('07')" href="#">Arts</a></li>
-		    <li><a onclick="btn('08')" href="#">All News</a></li>
-		</ul>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <li class="nav-item"><a class="nav-link active me-5" onclick="btn('01')"value="01" >Home</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+			<li nav-item><a class="nav-link me-2"onclick="btn('02')"value="02">Breaking News</a></li>
+			<li nav-item><a class="nav-link me-2"onclick="btn('03')"value="03">Regular News</a></li>
+			<li nav-item><a class="nav-link me-2"onclick="btn('05')"value="05">International News</a></li>
+			<li nav-item><a class="nav-link me-2"onclick="btn('04')" value="04">Sports</a></li>
+			<li nav-item><a class="nav-link me-2"onclick="btn('06')" value="06">Entertainment</a></li>
+		  <li nav-item><a class="nav-link me-2"onclick="btn('07')" value="07">Culture</a></li>
+      <li nav-item><a class="nav-link me-2"onclick="btn('09')" value="09">Arts</a></li>
+		  <li nav-item><a class="nav-link me-2"onclick="btn('08')" value="08">All News</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
 	</section>
 	<section class="news-category">
 		<div class="number-details">
@@ -53,22 +66,51 @@
 	<section class="news-shorts">
 		<div class="Tranding-part">
 		<div class="shorts-view">
-			<h5>shorts details</h5><input class="w-50"type="text" id="sort">
+			<h5>short details</h5><input class="w-50"type="text" id="sort">
 		</div>
 		<div class="trand-pick">
 			<a href="#">Today's Pick</a>
-			<a href="#">Tranding</a>
+			<a href="#">Trending</a>
 		</div>
 	</div>
 	</section>
-<div id="spinner"class="spinner-div d-none ">
+
+	<section class="news-card-section" id="news-card-section">
+
+	</section>
+	<section>
+		
+<div class="modal"id="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-tittle"><h2 id="modal-tittle"></h2>
+        	
+        </div>
+        	
+        
+        
+      </div>
+      <div id="news-details" class="modal-body">
+
+      
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+	</section>
+	<div id="spinner"class="spinner-div d-none ">
 <div class="spinner-border text-primary " role="status">
   <span class="visually-hidden "></span>
 </div>
 </div>
-	<section class="news-card-section" id="news-card-section">
-
-	</section>
 
 </section>
 <section id="blogs" class="d-none">
@@ -130,5 +172,23 @@ Along with having normal strings, template literals can also contain other parts
 <script src="https://kit.fontawesome.com/696f5b5cca.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script type="text/javascript"src="news.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+    	
+	                   
+
+
+
+
 </body>
 </html>

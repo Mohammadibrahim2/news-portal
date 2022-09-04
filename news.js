@@ -4,59 +4,84 @@
 const AllNews=(category_id)=>{
 
 	const url=`https://openapi.programming-hero.com/api/news/category/${category_id}`
-	fetch(url)
-	.then(res=>res.json())
-	.then(data=>showNews(data.data))
+	
+	fetch(url).then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error('Something went wrong');
+  }
+})
+.then((responseJson) => {
+  showNews(responseJson.data)
+})
+.catch((error) => {
+	
+  console.log(error)
+})
 }
 
 
 const showNews=(news)=>{
+
+	
    
 
    const newsCardSection=document.getElementById('news-card-section')
    newsCardSection.innerHTML=" "
    const numbersOfNews=document.getElementById('numbers-of-news');
    numbersOfNews.innerText=`${news.length} items found of whole catagory`;
-    console.log("ami vat khai")
     
-	news.sort(function(a,b){
-    	
-    	return b-a
-    })    
-
-console.log(news.length)
-if(news.length==3){
-	console.log("bow amr chilllay")
-}
-
-    const sort=document.getElementById('sort')
     
     const spinner=document.getElementById('spinner')
    if(news.length===0){
    	spinner.classList.remove('d-none')
+   	const emptydata=document.createElement('div')
+   	emptydata.innerHTML=`<h1 class="text-center">There is no data </h2>`
+   	newsCardSection.appendChild(emptydata)
+
    }
    else{
    	spinner.classList.add('d-none')
    }
   
-    for(const info of news){
 
+
+
+    news.forEach(info=>{
+
+    	const modalTittle=document.getElementById('modal-tittle')
+ modalTittle.innerText=info.title;
+ const newsDetails=document.getElementById('news-details')
+ newsDetails.innerHTML=`
+<h3>Author name:${info.author.name ? info.author.name : 'No auther name'}</h3>
+<p>${info.author.published_date ? info.author.published_date : 'No exist time and date'}</p>
+<p>${info.details}</p>
+<p>Total view: ${info.total_view}</p>
+<p>Bdge: ${info.rating.badge}</p>
+
+
+ `
 
     	console.log(info)
+    const sort=document.getElementById('sort')
 
-        const newsCard=document.createElement('div')
-         newsCard.innerHTML=
+    const infoObject=info.total_view;
+    
+   sort.value=infoObject
 
-    	`
+      const newsCard=document.createElement('div')
+      newsCard.innerHTML=
 
-    	<div class="news-card">
+    
+          `<div class="news-card">
 			<div class="thumbnil">
 				<img src="${info.image_url}">
 			</div>
 			<div class="news-description bg-white">
 				<div>
 				<h5>${info.title}</h5>
-				<p class="mt-5">${info.details.slice(0,400)}....</p>
+				<p class="mt-5">${info.details.slice(0,300)}....</p>
 
 
 				<p></p>
@@ -66,15 +91,15 @@ if(news.length==3){
 					<div class="author small-img">
 						<img src="${info.author.img}">
 						<div>
-						<h5>${info.author?.name}</h5>
-						<p>${info.author.published_date}</p>
+						<h5>${info.author.name ? info.author.name : 'No auther name'}</h5>
+						<p>${info.author.published_date ? info.author.published_date : 'No exist time and date'}</p>
 					</div>
 					</div>
 					<div class="views">
 						<i></i><h4>${info.rating.number} M</h4>
-						
-						
-					</div>
+					
+          </div>
+
 					<div class="rating">
 					   <i class="fa-solid fa-star-half-stroke"></i>
 						<i class="fa-regular fa-star"></i>
@@ -82,47 +107,40 @@ if(news.length==3){
 						<i class="fa-regular fa-star"></i>
 					</div>
 					<div id="btn-of-detasls" class="arrow-icon">
-						<h3 class="btn btn-primary"data-bs-toggle="modal"data-bs-target="#modal" ><i id="modal-btn" class="fa-solid fa-arrow-right"></i></h3>
+						<h3 id="modal-btn" class="btn btn-primary" >
+						<i data-bs-toggle="modal" data-bs-target="#modal" class="fa-solid fa-arrow-right" ></i></h3>
                    </div>
-
-                  <div id="modal" class="modal" tabindex="-1">
-                  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">${info.title}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2>${info.author.name}</h2>
-        <p>${info.author.published_date}</p>
-        <p>${info.details}</p>
-      </div>
-      
-    </div>
-  </div>
+                     </div>
+                      </div>
+                     </div>	
 
 
-			
-				
-			
-		</div>
-		`
+
+	                   </div>
+
+	                   `
+		
 
 		newsCardSection.appendChild(newsCard);
 
-    }
+    })
 };
 
 
 
-
 const btn=(value)=>{
+
+
+
 
    AllNews(value);
 	
 }
 AllNews('08');
 btn();
+
+
+
 
 
 const blog=document.getElementById('blog')
