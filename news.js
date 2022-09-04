@@ -132,7 +132,7 @@ newsC.classList.remove('active')
 
 });
 
-const newsC=document.getElementById('newss')
+const newsC=document.getElementById('news-section')
 newsC.addEventListener('click',function(){
 const blogs=document.getElementById('blogs')
 blogs.classList.add('d-none')
