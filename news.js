@@ -88,7 +88,7 @@ const showNews=(news)=>{
 					
           </div>
 
-					<div class="rating">
+					<div class="rating d-lg-block d-none">
 					   <i class="fa-solid fa-star-half-stroke"></i>
 						<i class="fa-regular fa-star"></i>
 						<i class="fa-regular fa-star"></i>
